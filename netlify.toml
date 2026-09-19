@@ -1,0 +1,31 @@
+# Publicacion estatica: sin build, se sirve la carpeta tal cual.
+[build]
+  publish = "."
+
+# Mismo criterio de cache que el .htaccess (que solo aplica en Apache/Hostinger):
+# el codigo se revalida siempre, las imagenes y fuentes se cachean.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-cache, must-revalidate"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "no-cache, must-revalidate"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "no-cache, must-revalidate"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"

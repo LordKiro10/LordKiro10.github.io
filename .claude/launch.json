@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web3dqr",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8137", "--bind", "127.0.0.1", "--directory", "D:/user kiro/Escritorio/INVERSIONES/PROGRAMAS IA/micro saas/qr3d"],
+      "port": 8137
+    },
+    {
+      "name": "artefacto",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8142", "--bind", "127.0.0.1", "--directory", "C:/Users/User/AppData/Local/Temp/claude/D--PROYECTO-ATLAS/c6dcd453-b15c-4130-af09-611861d1dc9b/scratchpad"],
+      "port": 8142
+    }
+  ]
+}
